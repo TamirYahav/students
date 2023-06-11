@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,14 @@
             border-collapse: collapse;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid black;
             padding: 8px;
         }
     </style>
 </head>
+
 <body>
     <h1>Use the path /students/postStudents</h1>
     <h2>To post new students</h2>
@@ -30,15 +33,33 @@
             <th>Last Name</th>
             <th>Email</th>
             <th>Telephone</th>
+            <th>Action</th>
         </tr>
         <% users.forEach((data) => { %>
-            <tr>
-                <td><%= data.firstName %></td>
-                <td><%= data.lastName %></td>
-                <td><%= data.email %></td>
-                <td><%= data.tel %></td>
-            </tr>
+        <tr>
+            <td><%= data.firstName %></td>
+            <td><%= data.lastName %></td>
+            <td><%= data.email %></td>
+            <td><%= data.tel %></td>
+            <td><a class="deletion" data-student-id="<%= data.id %>">Delete</a></td>
+        </tr>
         <% }) %>
     </table>
+
+    <script>
+        
+        const del = document.querySelectorAll('.deletion')
+        
+        del.forEach( element => {
+            element.addEventListener('click', (e) =>{
+                const studentID = e.target.dataset.studentId
+                const endpoint = `/students/${studentID}`
+                fetch(endpoint, {method: 'DELETE'})
+            })
+        })
+
+
+    </script>
 </body>
+
 </html>
