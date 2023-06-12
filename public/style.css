@@ -1,0 +1,26 @@
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+    padding-top: 50px;
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbIW_M_FeM0NcFOLfIztGCNbbAxpBGdozGw&usqp=CAU");
+    background-size:contain;
+}
+form{
+    background-color:whitesmoke ;
+    width: 500px;
+    height: 225px;
+}
+input{
+    border-radius: 15px;
+}
+table,th,tr{
+    background-color: whitesmoke;
+    margin: 50px;
+}
