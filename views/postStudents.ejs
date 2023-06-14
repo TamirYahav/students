@@ -10,14 +10,23 @@
 
 </head>
 <body>
-    <h1>Fill out the form bellow to post new students:</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/students/postStudents">Post New Students</a></li>
+            </ul>
+        </nav>
+     </header>
+    
+    <h1 class="form_h1">Fill out the form bellow to post new students:</h1>
  <form action="/students/postStudents" method="post">
 
     <input type="text" style="margin-bottom: 10px" name="firstName" class="form-control" placeholder="enter student first name">
     <input type="text" style="margin-bottom: 10px" name="lastName" class="form-control" placeholder="enter student last name">
-    <input type="email" style="margin-bottom: 10px" name="email" class="form-control" placeholder="enter student email">
-    <input type="tel" style="margin-bottom: 10px" name="tel" class="form-control" pattern="05[0-9]-[0-9]{7}" placeholder="enter student phone number">
-    <input type="submit" value="submit">
+    <input type="email" style="margin-bottom: 10px" name="email" class="form-control" placeholder="email a@gmail.com">
+    <input type="tel" style="margin-bottom: 10px" name="tel" class="form-control" pattern="05[0-9]-[0-9]{7}" placeholder="05#-#######">
+    <input type="submit" value="SUBMIT">
 </form> 
 
 

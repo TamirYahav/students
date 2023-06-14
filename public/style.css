@@ -12,10 +12,31 @@ body{
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbIW_M_FeM0NcFOLfIztGCNbbAxpBGdozGw&usqp=CAU");
     background-size:contain;
 }
+.form_h1{
+    margin-left: 100px;
+}
 form{
-    background-color:whitesmoke ;
-    width: 500px;
-    height: 225px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+form input[type="submit"] {
+    display: block;
+    width: 200px;
+    height: 40px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor:pointer;
+}
+form input[type="submit"]:hover {
+    background-color: #0056b3;
 }
 input{
     border-radius: 15px;
@@ -24,3 +45,22 @@ table,th,tr{
     background-color: whitesmoke;
     margin: 50px;
 }
+ul{
+  list-style-type:none;
+  margin: 0; 
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px; 
+  width:fit-content;
+}
+a:hover{
+  background-color: aqua;
+  font-style: italic;
+  font-family:'Times New Roman', Times, serif;
+}
+a:active{
+    background-color: antiquewhite;
+}
+a:visited{
+    color: purple;
+}
+

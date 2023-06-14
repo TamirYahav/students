@@ -1,13 +1,9 @@
 import express from "express";
 const router = express.Router();
-import user from "../models/user.js";
+import user from "../modules/user.js";
 
 router.get("/postStudents", (req, res) => {
   res.render("postStudents");
-});
-
-router.get("/deleteStudents", (req, res) => {
-  res.render("deleteStudents");
 });
 
 router.get("/deleteUser/:id", (req, res) => {

@@ -1,12 +1,12 @@
 import express from "express";
 import dotenv from "dotenv"
 dotenv.config()
-import database from './models/database.js'
-import user from './models/user.js'
+import database from './modules/database.js'
+import user from './modules/user.js'
 
 const app = express()
 
-import studentsRoute from "./controller/students.js"
+import studentsRoute from "./Routes/students.js"
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
