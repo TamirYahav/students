@@ -1,53 +1,178 @@
-h1{
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body
+{
+     display:inline;
+     min-height: 100vh;  
+     background: #23242a;
+     background-image: url("https://mcdn.wallpapersafari.com/medium/57/19/fQjo5v.png");
+     background-size:cover;   
+}
+.box
+{
+    position: relative;
+    width: 370px;
+    height: 500px;
+    background: #1c1c1c;
+    border-radius: 50px 5px;
+    overflow: hidden;
+    margin-left: 500px;
+}
+.box::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg,transparent,#45f3ff,#45f3ff); 
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+box::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 370px;
+    height: 450px;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+form
+{
+    position:absolute ; 
+    inset: 2px;
+    border-radius: 50px 5px;
+    background: linear-gradient(60deg,transparent,#f0e2eb,#d9138a); 
+    z-index: 10;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+h2
+{
+    color:#0d0801;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+}
+.inputBox
+{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.inputBox input
+{
+    position:relative;
+    width: 100%;
+    height: 40px;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+input[type="submit"]
+{
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 5px;
+    margin-top: 40px;
+    border-radius: 90px;
+    font-weight: 600;
+    cursor: pointer;;
+}
+input[type="submit"]:active
+{
+    background:linear-gradient(90deg,#45f3ff,#d9138a);
+    opacity: 1.8;
+}
+.inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #f6f8f8;
+    transform: translateX(-10px) translateY(-30px);
+    font-size: 0.75em;
+}
+.inputBox i
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #d9138a;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i
+{
+    height: 20px;
+}
+h1
+{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-left: 10px;
     padding-top: 50px;
+    color:red;
+    font-style: oblique;
+    font-variant:small-caps; 
 }
-h2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-body{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbIW_M_FeM0NcFOLfIztGCNbbAxpBGdozGw&usqp=CAU");
-    background-size:contain;
-}
-.form_h1{
+.form_h1
+{
     margin-left: 100px;
-}
-form{
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-}
-form input[type="submit"] {
-    display: block;
-    width: 200px;
-    height: 40px;
-    background-color: green;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 25px;
-    cursor:pointer;
-}
-form input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-input{
-    border-radius: 15px;
-}
-table,th,tr{
+} 
+table,th,tr
+{
     background-color: whitesmoke;
     margin: 50px;
 }
-ul{
-  list-style-type:none;
-  margin: 0; 
+ul,li
+{   
+  list-style-type:decimal-leading-zero;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 30px; 
   width:fit-content;
@@ -61,6 +186,9 @@ a:active{
     background-color: antiquewhite;
 }
 a:visited{
-    color: purple;
+    color:wheat;
 }
 
+
+
+  

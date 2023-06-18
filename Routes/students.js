@@ -23,16 +23,11 @@ router.get("/deleteUser/:id", (req, res) => {
 
 router.post("/postStudents", (req, res) => {
   const userDetails = req.body;
-  if ( userDetails.firstName.length === 0 || userDetails.lastName.length === 0  || userDetails.email.length === 0 || userDetails.tel.length === 0) {
-     return res.status(400).send("Please fill in all the fields.");
-  }
-
   user
     .create(userDetails)
     .then((d) => {
       res.redirect("/");
     })
-
     .catch((error) => {
       res.status(500).send("An error occurred while adding the student.");
     });
